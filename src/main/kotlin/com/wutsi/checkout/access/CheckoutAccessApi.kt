@@ -18,6 +18,8 @@ import com.wutsi.checkout.access.dto.SearchOrderRequest
 import com.wutsi.checkout.access.dto.SearchOrderResponse
 import com.wutsi.checkout.access.dto.SearchPaymentMethodRequest
 import com.wutsi.checkout.access.dto.SearchPaymentMethodResponse
+import com.wutsi.checkout.access.dto.SearchPaymentProviderRequest
+import com.wutsi.checkout.access.dto.SearchPaymentProviderResponse
 import com.wutsi.checkout.access.dto.SearchTransactionRequest
 import com.wutsi.checkout.access.dto.SearchTransactionResponse
 import com.wutsi.checkout.access.dto.UpdateBusinessStatusRequest
@@ -31,6 +33,11 @@ import kotlin.String
 import kotlin.Unit
 
 public interface CheckoutAccessApi {
+  @RequestLine("POST /v1/payment-providers/search")
+  @Headers(value=["Content-Type: application/json"])
+  public fun searchPaymentProvider(request: SearchPaymentProviderRequest):
+      SearchPaymentProviderResponse
+
   @RequestLine("POST /v1/payment-methods")
   @Headers(value=["Content-Type: application/json"])
   public fun createPaymentMethod(request: CreatePaymentMethodRequest): CreatePaymentMethodResponse

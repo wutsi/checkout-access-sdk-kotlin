@@ -5,6 +5,7 @@ import kotlin.String
 
 public data class CreatePaymentMethodRequest(
   public val accountId: Long = 0,
+  public val providerId: Long = 0,
   public val type: String = "",
   public val number: String = "",
   public val country: String = "",

@@ -13,4 +13,5 @@ public data class PaymentMethodSummary(
   public val created: OffsetDateTime = OffsetDateTime.now(),
   public val updated: OffsetDateTime = OffsetDateTime.now(),
   public val deactivated: OffsetDateTime? = null,
+  public val provider: PaymentProviderSummary = PaymentProviderSummary(),
 )
