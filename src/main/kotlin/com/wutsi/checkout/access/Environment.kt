@@ -5,7 +5,7 @@ import kotlin.String
 public enum class Environment(
   public val url: String,
 ) {
-  SANDBOX("https://checkout-access-server-test.herokuapp.com"),
-  PRODUCTION("https://checkout-access-server-prod.herokuapp.com"),
+  SANDBOX("https://checkout-access-test.herokuapp.com"),
+  PRODUCTION("https://checkout-access-prod.herokuapp.com"),
   ;
 }
