@@ -4,8 +4,7 @@ import kotlin.Long
 import kotlin.String
 
 public data class CreateCashoutRequest(
-  public val customerEmail: String = "",
-  public val deviceId: String = "",
+  public val email: String = "",
   public val paymentMethodToken: String = "",
   public val businessId: Long = 0,
   public val amount: Long = 0,

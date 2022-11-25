@@ -9,7 +9,6 @@ public data class TransactionSummary(
   public val customerId: Long? = null,
   public val businessId: Long = 0,
   public val type: String = "",
-  public val paymentMethodToken: String = "",
   public val description: String? = null,
   public val amount: Long = 0,
   public val fees: Long = 0,
@@ -20,4 +19,5 @@ public data class TransactionSummary(
   public val orderId: String? = null,
   public val created: OffsetDateTime = OffsetDateTime.now(),
   public val updated: OffsetDateTime = OffsetDateTime.now(),
+  public val paymentMethod: PaymentMethodSummary = PaymentMethodSummary(),
 )

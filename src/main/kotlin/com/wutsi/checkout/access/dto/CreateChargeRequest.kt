@@ -4,9 +4,12 @@ import kotlin.Long
 import kotlin.String
 
 public data class CreateChargeRequest(
-  public val customerEmail: String = "",
-  public val deviceId: String = "",
-  public val paymentMethodToken: String = "",
+  public val email: String = "",
+  public val paymentMethodType: String? = null,
+  public val paymentMethodOwnerName: String? = null,
+  public val paymentProviderId: Long? = null,
+  public val paymentMethodToken: String? = null,
+  public val paymenMethodNumber: String? = null,
   public val businessId: Long = 0,
   public val amount: Long = 0,
   public val orderId: String = "",

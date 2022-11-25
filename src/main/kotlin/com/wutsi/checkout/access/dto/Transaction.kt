@@ -24,5 +24,6 @@ public data class Transaction(
   public val updated: OffsetDateTime = OffsetDateTime.now(),
   public val orderId: String? = null,
   public val gatewayType: String = "",
+  public val email: String? = null,
   public val paymentMethod: PaymentMethodSummary = PaymentMethodSummary(),
 )
