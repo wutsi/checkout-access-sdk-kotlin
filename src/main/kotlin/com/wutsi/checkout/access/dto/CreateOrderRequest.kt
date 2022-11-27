@@ -8,7 +8,6 @@ public data class CreateOrderRequest(
   public val deviceType: String? = null,
   public val channelType: String? = null,
   public val businessId: Long = 0,
-  public val reservationId: Long? = null,
   public val notes: String? = null,
   public val currency: String = "",
   public val customerId: Long? = null,
