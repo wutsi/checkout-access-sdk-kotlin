@@ -22,6 +22,7 @@ import com.wutsi.checkout.access.dto.SearchPaymentProviderRequest
 import com.wutsi.checkout.access.dto.SearchPaymentProviderResponse
 import com.wutsi.checkout.access.dto.SearchTransactionRequest
 import com.wutsi.checkout.access.dto.SearchTransactionResponse
+import com.wutsi.checkout.access.dto.SyncTransactionStatusResponse
 import com.wutsi.checkout.access.dto.UpdateBusinessStatusRequest
 import com.wutsi.checkout.access.dto.UpdateOrderStatusRequest
 import com.wutsi.checkout.access.dto.UpdatePaymentMethodStatusRequest
@@ -105,5 +106,5 @@ public interface CheckoutAccessApi {
 
   @RequestLine("GET /v1/transactions/{id}/status/sync")
   @Headers(value=["Content-Type: application/json"])
-  public fun syncTransactionStatus(@Param("id") id: String): Unit
+  public fun syncTransactionStatus(@Param("id") id: String): SyncTransactionStatusResponse
 }
