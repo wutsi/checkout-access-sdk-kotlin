@@ -84,10 +84,6 @@ public interface CheckoutAccessApi {
   @Headers(value=["Content-Type: application/json"])
   public fun updateOrderStatus(@Param("id") id: String, request: UpdateOrderStatusRequest): Unit
 
-  @RequestLine("POST /v1/orders/{id}/balance")
-  @Headers(value=["Content-Type: application/json"])
-  public fun updateOrderBalance(@Param("id") id: String): Unit
-
   @RequestLine("POST /v1/transactions/charge")
   @Headers(value=["Content-Type: application/json"])
   public fun createCharge(request: CreateChargeRequest): CreateChargeResponse
