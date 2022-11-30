@@ -12,6 +12,7 @@ public data class SearchOrderRequest(
   public val status: List<String> = emptyList(),
   public val createdFrom: OffsetDateTime? = null,
   public val createdTo: OffsetDateTime? = null,
+  public val expiredFrom: OffsetDateTime? = null,
   public val limit: Int = 100,
   public val offset: Int = 0,
 )

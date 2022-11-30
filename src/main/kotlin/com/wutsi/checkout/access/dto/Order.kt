@@ -21,6 +21,8 @@ public data class Order(
   public val currency: String = "",
   public val created: OffsetDateTime = OffsetDateTime.now(),
   public val updated: OffsetDateTime = OffsetDateTime.now(),
+  public val expired: OffsetDateTime? = null,
+  public val expires: OffsetDateTime = OffsetDateTime.now(),
   public val cancelled: OffsetDateTime? = null,
   public val cancellationReason: String? = null,
   public val closed: OffsetDateTime? = null,

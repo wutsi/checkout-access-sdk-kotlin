@@ -19,6 +19,8 @@ public data class OrderSummary(
   public val updated: OffsetDateTime = OffsetDateTime.now(),
   public val cancelled: OffsetDateTime? = null,
   public val closed: OffsetDateTime? = null,
+  public val expired: OffsetDateTime? = null,
+  public val expires: OffsetDateTime = OffsetDateTime.now(),
   public val customerId: Long? = null,
   public val customerName: String = "",
   public val customerEmail: String = "",
