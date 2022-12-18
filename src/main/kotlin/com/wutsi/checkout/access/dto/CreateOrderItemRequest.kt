@@ -7,6 +7,7 @@ import kotlin.collections.List
 
 public data class CreateOrderItemRequest(
   public val productId: Long = 0,
+  public val productType: String = "",
   public val title: String = "",
   public val quantity: Int = 0,
   public val pictureUrl: String? = null,
