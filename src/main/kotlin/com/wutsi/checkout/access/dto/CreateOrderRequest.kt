@@ -11,7 +11,7 @@ public data class CreateOrderRequest(
   public val businessId: Long = 0,
   public val notes: String? = null,
   public val currency: String = "",
-  public val customerId: Long? = null,
+  public val customerAccountId: Long? = null,
   public val customerName: String = "",
   public val customerEmail: String = "",
   public val expires: OffsetDateTime? = null,
