@@ -20,6 +20,8 @@ import com.wutsi.checkout.access.dto.SearchPaymentMethodRequest
 import com.wutsi.checkout.access.dto.SearchPaymentMethodResponse
 import com.wutsi.checkout.access.dto.SearchPaymentProviderRequest
 import com.wutsi.checkout.access.dto.SearchPaymentProviderResponse
+import com.wutsi.checkout.access.dto.SearchSalesKpiRequest
+import com.wutsi.checkout.access.dto.SearchSalesKpiResponse
 import com.wutsi.checkout.access.dto.SearchTransactionRequest
 import com.wutsi.checkout.access.dto.SearchTransactionResponse
 import com.wutsi.checkout.access.dto.SyncTransactionStatusResponse
@@ -103,4 +105,8 @@ public interface CheckoutAccessApi {
   @RequestLine("GET /v1/transactions/{id}/status/sync")
   @Headers(value=["Content-Type: application/json"])
   public fun syncTransactionStatus(@Param("id") id: String): SyncTransactionStatusResponse
+
+  @RequestLine("POST /v1/kpis/sales/search")
+  @Headers(value=["Content-Type: application/json"])
+  public fun searchSalesKpi(request: SearchSalesKpiRequest): SearchSalesKpiResponse
 }
