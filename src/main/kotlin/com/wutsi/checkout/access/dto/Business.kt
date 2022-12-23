@@ -15,6 +15,5 @@ public data class Business(
   public val updated: OffsetDateTime = OffsetDateTime.now(),
   public val deactivated: OffsetDateTime? = null,
   public val totalOrders: Long = 0,
-  public val totalUnits: Long = 0,
-  public val totalValue: Long = 0,
+  public val totalSales: Long = 0,
 )
