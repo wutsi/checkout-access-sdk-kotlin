@@ -4,7 +4,8 @@ import kotlin.Long
 import kotlin.String
 
 public data class CreateOrderDiscountRequest(
-  public val code: String = "",
-  public val amount: Long = 0,
+  public val discountId: Long = 0,
+  public val name: String = "",
   public val type: String = "",
+  public val amount: Long = 0,
 )
